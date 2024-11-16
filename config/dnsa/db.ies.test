@@ -1,15 +1,16 @@
 $TTL 604800
-@       IN      SOA     dnsa.ies.test. admin.ies.test. (
-                        2024111601 ; Serial
-                        604800     ; Refresh
-                        86400      ; Retry
-                        2419200    ; Expire
-                        604800 )   ; Minimum TTL
+@   IN  SOA     ns1.ies.test. admin.ies.test. (
+                    2024111601 ; Serial
+                    604800     ; Refresh
+                    86400      ; Retry
+                    2419200    ; Expire
+                    604800 )   ; Minimum TTL
 
 ; DNS
-        IN      NS      dnsa.ies.test.
-        IN      NS      dnsb.ies.test.
+@       IN      NS      ns1.ies.test.
+ns1     IN      A       192.168.57.2
 
-; Registros A
-dnsa    IN      A       192.168.57.2
-dnsb    IN      A       192.168.57.3
+; Referencias a subdominios
+informatica     IN      NS      ns1.ies.test.
+aulas           IN      NS      ns1.ies.test.
+departamentos   IN      NS      ns1.ies.test.
