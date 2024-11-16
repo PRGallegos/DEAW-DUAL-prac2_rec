@@ -10,8 +10,8 @@ $TTL 604800
 ns1     IN      A       192.168.57.2
 
 ; Registros A para hosts
-server01    IN  A       192.168.57.10
-pcprofesor  IN  A       192.168.57.20
-pc01        IN  A       192.168.57.21
-pc02        IN  A       192.168.57.22
-pc03        IN  A       192.168.57.23
+server01        IN      A       192.168.57.10
+pcprofesor      IN      A       192.168.57.20
+pc01            IN      A       192.168.57.21
+pc02            IN      A       192.168.57.22
+pc03            IN      A       192.168.57.23
