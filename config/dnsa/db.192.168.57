@@ -6,8 +6,8 @@ $TTL 604800
         2419200     ; Expire (4 semanas)
         604800 )    ; Negative Cache TTL (1 semana)
 
-; Servidores de nombres
-@   IN  NS      ns1.ies.test.
+; DNS
+@       IN      NS      dnsa.ies.test.
 
 ; Zona inversa para el subdominio informática
 10  IN  PTR     server01.informatica.ies.test.
