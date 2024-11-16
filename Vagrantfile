@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
       
       dnsa.vm.provision "shell", inline: <<-SHELL
         cp /vagrant/files/DNSA/named.conf.local /etc/bind/named.conf.local
-        mkdir /etc/bind/config.
+        mkdir /etc/bind/config
         cp /vagrant/files/dnsa/config/* /etc/bind/config/
         systemctl restart bind9
       SHELL
