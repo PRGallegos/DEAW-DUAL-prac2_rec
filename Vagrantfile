@@ -14,9 +14,9 @@ Vagrant.configure("2") do |config|
       dnsa.vm.network "private_network", ip: "192.168.57.10"
       
       dnsa.vm.provision "shell", inline: <<-SHELL
-        cp /vagrant/config/DNSA/named.conf.local /etc/bind/named.conf.local
-        mkdir /etc/bind/zones
-        cp /vagrant/config/dnsa/zones/* /etc/bind/zones/
+        cp /vagrant/files/DNSA/named.conf.local /etc/bind/named.conf.local
+        mkdir /etc/bind/config.
+        cp /vagrant/files/dnsa/config/* /etc/bind/config/
         systemctl restart bind9
       SHELL
     end # dnsa
@@ -26,8 +26,8 @@ Vagrant.configure("2") do |config|
       dnsb.vm.network "private_network", ip: "192.168.57.11"
   
       dnsb.vm.provision "shell", inline: <<-SHELL
-          cp /vagrant/config/dnsb/named.conf.local /etc/bind/named.conf.local
+          cp /vagrant/files/dnsb/named.conf.local /etc/bind/named.conf.local
         systemctl restart bind9
       SHELL
-    end # dnsb  l
+    end # dnsb
 end

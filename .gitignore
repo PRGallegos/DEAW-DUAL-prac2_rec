@@ -1,2 +1,6 @@
-# Archivos de Vagrant 
+# Archivos temporales de Vagrant
 .vagrant/
+
+# Archivos de logs
+*.log
+

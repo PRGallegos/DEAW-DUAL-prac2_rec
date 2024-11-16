@@ -1,0 +1,24 @@
+// Configuración de las zonas esclavas en DNSB
+zone "informatica.ies.test" {
+    type slave;
+    masters { 192.168.57.2; }; // IP del maestro DNSA
+    file "/var/cache/bind/db.informatica.ies.test";
+};
+
+zone "aulas.ies.test" {
+    type slave;
+    masters { 192.168.57.2; }; // IP del maestro DNSA
+    file "/var/cache/bind/db.aulas.ies.test";
+};
+
+zone "departamentos.ies.test" {
+    type slave;
+    masters { 192.168.57.2; }; // IP del maestro DNSA
+    file "/var/cache/bind/db.departamentos.ies.test";
+};
+
+zone "57.168.192.in-addr.arpa" {
+    type slave;
+    masters { 192.168.57.2; }; // IP del maestro DNSA
+    file "/var/cache/bind/db.192.168.57";
+};
