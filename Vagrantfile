@@ -8,6 +8,4 @@ Vagrant.configure("2") do |config|
       apt-get update
       apt-get install -y bind9 bind9-doc bind9utils 
     SHELL
-
-  
 end
