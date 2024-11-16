@@ -29,5 +29,5 @@ Vagrant.configure("2") do |config|
           cp /vagrant/config/DNSB/named.conf.local /etc/bind/named.conf.local
         systemctl restart bind9
       SHELL
-    end # dnsb
+    end # dnsb  l
 end
