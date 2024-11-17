@@ -270,3 +270,39 @@ Aliases:
 
 ingles02.departamentos.ies.test has address 192.168.57.152
 ```
+
+Consultas inversas:
+
+```
+vagrant@dnsa:~$ host 192.168.57.23 192.168.57.10
+Using domain server:
+Name: 192.168.57.10
+Address: 192.168.57.10#53
+Aliases:
+
+23.57.168.192.in-addr.arpa domain name pointer pc03.informatica.ies.test.
+```
+
+```
+vagrant@dnsa:~$ host 192.168.57.103 192.168.57.10
+Using domain server:
+Name: 192.168.57.10
+Address: 192.168.57.10#53
+Aliases:
+
+103.57.168.192.in-addr.arpa domain name pointer pc06.aulas.ies.test.
+```
+
+```
+vagrant@dnsa:~$ host 192.168.57.151 192.168.57.10
+Using domain server:
+Name: 192.168.57.10
+Address: 192.168.57.10#53
+Aliases:
+
+151.57.168.192.in-addr.arpa domain name pointer ingles01.departamentos.ies.test.
+```
+
+# Conclusión
+Después de llevar a cabo todas las pruebas utilizando nslookup, dig y host en los servidores DNSA y DNSB, se ha verificado que la configuración del sistema DNS opera de manera óptima y satisface todos los requisitos establecidos. Las consultas directas e inversas se resuelven correctamente en todas las zonas configuradas, y las transferencias de zona entre DNSA y DNSB se realizan sin inconvenientes. Esto garantiza una gestión eficiente y fiable de las resoluciones de nombres en nuestra infraestructura de red.
+
